@@ -1,0 +1,22 @@
+{
+	"header": {
+		"home": "Home",
+		"blogs": "Blogs",
+		"contactus": "Contact Us",
+		"aboutus": "About Us",
+		"search": "Search",
+		"signup": "Sign Up",
+		"login": "Login",
+		"dashboard": "Dashboard",
+		"myprofile": "My Profile",
+		"editprofile": "Edit Profile",
+		"setting": "Settings",
+		"logout": "Logout"
+	},
+	"banner": {
+		"title": "Welcome to BlogSphere",
+		"subtitle": "Welcome to the world of blog writing Awesome place to make oneself productive and entertained through daily updates.",
+		"placeholder": "Explore Now...",
+		"search": "Search"
+	}
+}
