@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+
+import { RiLayout4Fill, RiLayoutGridFill } from "react-icons/ri";
+
+import { CardTitle } from "@/components/ui/card";
 import HorizontalCard from "../CustomCards/HorizontalCard";
 import VerticalCard, { VerticalCardProps } from "../CustomCards/VerticalCard";
-import { CardTitle } from "@/components/ui/card";
-
-import { IoGrid } from "react-icons/io5";
-import { RiLayout4Fill, RiLayoutGridFill } from "react-icons/ri";
 
 export interface CustomCardLayoutProps {
 	title: string;
@@ -23,35 +23,37 @@ const CustomCardLayout = ({ title, layout, data }: CustomCardLayoutProps) => {
 					{title}
 				</CardTitle>
 
-				<div
-					className={`w-auto relative h-auto p-1.5 rounded bg-border flex justify-center items-center gap-1`}
-				>
-					<button
-						className={`relative z-10 w-6 h-6 cursor-pointer ${
-							isVertical
-								? "text-primary-foreground"
-								: "text-foreground"
-						}`}
-						onClick={() => setIsVertical(true)}
-					>
-						<RiLayout4Fill className={`w-full h-full`} />
-					</button>
-					<button
-						className={`relative z-10 w-6 h-6 cursor-pointer ${
-							!isVertical
-								? "text-primary-foreground"
-								: "text-foreground"
-						}`}
-						onClick={() => setIsVertical(false)}
-					>
-						<RiLayoutGridFill className={`w-full h-full`} />
-					</button>
+				{layout && (
 					<div
-						className={`w-7 h-7 rounded absolute ${
-							isVertical ? "left-1" : "left-8"
-						} top-1 bg-primary transition-all duration-300`}
-					></div>
-				</div>
+						className={`w-auto relative h-auto p-1.5 rounded bg-border flex justify-center items-center gap-1`}
+					>
+						<button
+							className={`relative z-10 w-6 h-6 cursor-pointer ${
+								isVertical
+									? "text-primary-foreground"
+									: "text-foreground"
+							}`}
+							onClick={() => setIsVertical(true)}
+						>
+							<RiLayout4Fill className={`w-full h-full`} />
+						</button>
+						<button
+							className={`relative z-10 w-6 h-6 cursor-pointer ${
+								!isVertical
+									? "text-primary-foreground"
+									: "text-foreground"
+							}`}
+							onClick={() => setIsVertical(false)}
+						>
+							<RiLayoutGridFill className={`w-full h-full`} />
+						</button>
+						<div
+							className={`w-7 h-7 rounded absolute ${
+								isVertical ? "left-1" : "left-8"
+							} top-1 bg-primary transition-all duration-300`}
+						></div>
+					</div>
+				)}
 			</div>
 			<div
 				className={`${

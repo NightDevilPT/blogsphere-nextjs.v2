@@ -1,12 +1,13 @@
-import { Badge } from "@/components/ui/badge";
+import React from "react";
+
 import {
 	Card,
 	CardDescription,
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import React from "react";
 import { CustomAvtar } from "../CustomAvtar";
+import { Badge } from "@/components/ui/badge";
 
 export interface HorizontalCardProps {
 	image?: string;
@@ -27,10 +28,10 @@ const HorizontalCard = ({
 }: HorizontalCardProps) => {
 	return (
 		<Card
-			className={`w-full max-w-72 h-96 rounded-3xl overflow-hidden relative`}
+			className={`w-full max-w-72 h-96 rounded-3xl overflow-hidden relative group`}
 		>
 			<div className={`w-full h-full`}>
-				<img src={image} className="w-full h-full object-cover" />
+				<img src={image} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300" />
 			</div>
 			<div
 				className={`w-full h-full absolute left-0 top-0 bg-slate-950/30`}
@@ -61,10 +62,10 @@ const HorizontalCard = ({
 						className={`text-xs flex justify-start items-center gap-3 text-white`}
 					>
 						<CustomAvtar />
-						<div className={`grid grid-cols-1`}>
+						<span className={`grid grid-cols-1`}>
 							<span>{username}</span>
 							<span>{createdAt}</span>
-						</div>
+						</span>
 					</CardDescription>
 				</CardHeader>
 			</div>
