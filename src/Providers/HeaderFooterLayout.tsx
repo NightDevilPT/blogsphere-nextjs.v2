@@ -1,4 +1,4 @@
-// import HeaderFrame from "@/components/custom/HeaderFrame";
+import HeaderFrame from "@/components/custom/HeaderFrame";
 
 export default function HeaderFooterLayout({
 	children,
@@ -7,7 +7,7 @@ export default function HeaderFooterLayout({
 }>) {
 	return (
 		<div className="relative">
-			{/* <HeaderFrame /> */}
+			<HeaderFrame />
 			{children}
 		</div>
 	);
