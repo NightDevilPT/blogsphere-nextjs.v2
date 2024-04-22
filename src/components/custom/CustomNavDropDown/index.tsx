@@ -1,3 +1,4 @@
+import React from "react";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -8,7 +9,7 @@ import {
 	DropdownMenuShortcut,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import React from "react";
+import Link from "next/link";
 
 export function CustomNavDropdownMenu({
 	children,
@@ -42,12 +43,12 @@ export function CustomNavDropdownMenu({
 			) : (
 				<DropdownMenuContent className="w-56 z-[9999]">
 					<DropdownMenuGroup>
-						<DropdownMenuItem>
-							Signup
-						</DropdownMenuItem>
-						<DropdownMenuItem>
-							Login
-						</DropdownMenuItem>
+						<Link href={"/auth/signup"}>
+							<DropdownMenuItem>Signup</DropdownMenuItem>
+						</Link>
+						<Link href={"/auth/login"}>
+							<DropdownMenuItem>Login</DropdownMenuItem>
+						</Link>
 					</DropdownMenuGroup>
 				</DropdownMenuContent>
 			)}
