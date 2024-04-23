@@ -12,7 +12,13 @@ export default function HeaderFooterLayout({
 	const pathName = usePathname();
 	const isHeaderShow = () => {
 		if (pathName) {
-			const allRoutes = ["/auth/login","/auth/signup"];
+			const allRoutes = [
+				"/auth/login",
+				"/auth/signup",
+				"/auth/forget-password",
+				"/auth/update-password",
+				"/auth/verify-user",
+			];
 			const isRestricted = allRoutes.includes(pathName);
 			return !isRestricted ? (
 				<React.Fragment>

@@ -59,7 +59,7 @@ const CustomCardLayout = ({ title, layout, data }: CustomCardLayoutProps) => {
 				className={`${
 					isVertical
 						? "grid-cols-3 max-2xl:grid-cols-2 max-lg:grid-cols-1"
-						: "grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 place-items-center"
+						: "grid-cols-5 max-2xl:grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-[500px]:grid-cols-1 place-items-center"
 				} grid gap-5`}
 			>
 				{data?.map(

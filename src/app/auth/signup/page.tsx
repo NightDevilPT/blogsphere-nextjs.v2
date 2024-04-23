@@ -18,7 +18,7 @@ const page = () => {
 			<div
 				className={`w-full h-full absolute left-0 top-0 bg-gradient-to-b from-transparent to-slate-950/90`}
 			></div>
-			<div className={`w-full h-full justify-center items-center flex absolute`}>
+			<div className={`w-full h-full justify-center items-center flex absolute max-sm:px-5`}>
 				<SignupForm />
 			</div>
 		</div>

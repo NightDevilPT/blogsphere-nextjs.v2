@@ -61,7 +61,7 @@ const LoginForm = () => {
 				<span className={`w-full h-auto text-right`}>
 					<Link
 						className="absolute w-full text-xs font-inter font-[500] text-sky-500 right-0 bottom-12"
-						href={"#"}
+						href={"/auth/forget-password"}
 					>
 						Forget Password?
 					</Link>
