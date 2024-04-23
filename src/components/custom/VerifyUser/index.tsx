@@ -14,7 +14,7 @@ export enum VERIFYTYPE {
 }
 
 const VerifyUser = () => {
-	const param = useSearchParams();
+	// const param = useSearchParams();
 	const [verify, setVerify] = useState<VERIFYTYPE>(VERIFYTYPE.SUCCESS);
 
 	return (
