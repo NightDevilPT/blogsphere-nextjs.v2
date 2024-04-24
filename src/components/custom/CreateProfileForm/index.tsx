@@ -115,35 +115,35 @@ const CreateProfileForm = () => {
 					</h1>
 					<div className={`w-full h-auto grid grid-cols-2 max-sm:grid-cols-1 gap-3`}>
 						<CustomInput
-							value={userForm.facebookUrl}
+							value={userForm.facebookUrl || ''}
 							name="facebookUrl"
 							type="text"
 							label="Facebook url"
 							placeholder="Facebook url"
 						/>
 						<CustomInput
-							value={userForm.instgramUrl}
+							value={userForm.instgramUrl || ''}
 							name="instgramUrl"
 							type="text"
 							label="Instgram url"
 							placeholder="Instgram url"
 						/>
 						<CustomInput
-							value={userForm.twitterUrl}
+							value={userForm.twitterUrl || ''}
 							name="twitterUrl"
 							type="text"
 							label="Twitter url"
 							placeholder="Twitter url"
 						/>
 						<CustomInput
-							value={userForm.youtubeUrl}
+							value={userForm.youtubeUrl || ''}
 							name="youtubeUrl"
 							type="text"
 							label="Youtube url"
 							placeholder="Youtube url"
 						/>
 						<CustomInput
-							value={userForm.linkedinUrl}
+							value={userForm.linkedinUrl || ''}
 							name="linkedinUrl"
 							type="text"
 							label="Linkedin url"
