@@ -9,6 +9,7 @@ export interface CustomInputIProps {
 	label: string;
 	name: string;
 	value: string;
+	bg?:string;
 }
 
 const CustomInput = ({
@@ -17,6 +18,7 @@ const CustomInput = ({
 	label,
 	name,
 	value,
+	bg
 }: CustomInputIProps) => {
 	const [inputValue, setInputValue] = useState<string>(value);
 	const [showPass, setShowPass] = useState<boolean>(
@@ -24,11 +26,11 @@ const CustomInput = ({
 	);
 	return (
 		<div className={`w-full h-auto grid grid-cols-1 gap-1`}>
-			<label
+			{/* <label
 				className={`w-full h-auto text-xs font-inter text-slate-500 ml-1 font-[500]`}
 			>
 				{label}
-			</label>
+			</label> */}
 			<div className={`w-full h-auto flex justify-center items-center gap-2`}>
 				<Input
 					name={name}
@@ -36,7 +38,7 @@ const CustomInput = ({
 					onChange={(event) => setInputValue(event.target.value)}
 					type={showPass ? "password" : "text"}
 					placeholder={placeholder}
-					className={`bg-input text-secondary-foreground font-inter font-[500] text-sm`}
+					className={`${bg} text-secondary-foreground font-inter text-sm`}
 				/>
 				{type === "password" && (
 					<button className={`w-9 p-2 h-full rounded-md bg-input text-secondary-foreground`} onClick={()=>setShowPass(!showPass)}>

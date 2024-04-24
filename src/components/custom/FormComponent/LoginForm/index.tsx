@@ -45,6 +45,7 @@ const LoginForm = () => {
 				onSubmit={handleSubmit}
 			>
 				<CustomInput
+					bg="bg-input"
 					value={loginForm.email}
 					name="email"
 					type="email"
@@ -52,6 +53,7 @@ const LoginForm = () => {
 					placeholder="Email"
 				/>
 				<CustomInput
+					bg="bg-input"
 					value={loginForm.password}
 					name="password"
 					type="password"

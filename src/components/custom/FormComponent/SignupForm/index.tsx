@@ -47,6 +47,7 @@ const SignupForm = () => {
 				onSubmit={handleSubmit}
 			>
 				<CustomInput
+					bg="bg-input"
 					value={signupForm.username}
 					name="username"
 					type="text"
@@ -54,6 +55,7 @@ const SignupForm = () => {
 					placeholder="username"
 				/>
 				<CustomInput
+					bg="bg-input"
 					value={signupForm.email}
 					name="email"
 					type="email"
@@ -61,6 +63,7 @@ const SignupForm = () => {
 					placeholder="Email"
 				/>
 				<CustomInput
+					bg="bg-input"
 					value={signupForm.password}
 					name="password"
 					type="password"

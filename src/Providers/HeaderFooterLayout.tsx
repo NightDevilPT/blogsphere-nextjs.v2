@@ -17,7 +17,7 @@ export default function HeaderFooterLayout({
 				"/auth/signup",
 				"/auth/forget-password",
 				"/auth/update-password",
-				"/auth/verify-user",
+				"/auth/verify-user"
 			];
 			const isRestricted = allRoutes.includes(pathName);
 			return !isRestricted ? (

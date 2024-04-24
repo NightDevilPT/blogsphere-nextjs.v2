@@ -44,6 +44,7 @@ const ForgetForm = () => {
 				onSubmit={handleSubmit}
 			>
 				<CustomInput
+					bg="bg-input"
 					value={ForgetForm.email}
 					name="email"
 					type="email"

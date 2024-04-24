@@ -32,6 +32,7 @@ const UpdateForm = () => {
 				onSubmit={handleSubmit}
 			>
 				<CustomInput
+					bg="bg-input"
 					value={UpdateForm.password}
 					name="password"
 					type="password"
