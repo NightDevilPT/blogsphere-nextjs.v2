@@ -19,7 +19,7 @@ const CustomCardLayout = ({ title, layout, data }: CustomCardLayoutProps) => {
 	return (
 		<div className={`w-full h-auto grid grid-cols-1 gap-2 py-2`}>
 			<div className={`flex justify-between items-center gap-2`}>
-				<CardTitle className={`text-xl text-foreground`}>
+				<CardTitle className={`text-xl font-inter text-foreground`}>
 					{title}
 				</CardTitle>
 

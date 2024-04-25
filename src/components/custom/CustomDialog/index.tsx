@@ -10,8 +10,8 @@ export interface CustomDialogProps {
 
 const CustomDialog = ({ children, setShow, title,show }: CustomDialogProps) => {
 	return (
-		<div className={`w-full h-full fixed left-0 top-0 z-[9999] ${show?'flex':'hidden'} justify-center items-center`}>
-			<div className={`w-96 h-auto p-5 space-y-3 shadow-[0_10px_32px_rgb(0,0,0,0.25)] rounded-md`}>
+		<div className={`w-full h-full fixed left-0 top-0 z-[9999] ${show?'flex':'hidden'} justify-center items-center max-sm:px-5`}>
+			<div className={`w-96 h-auto p-5 space-y-3 shadow-[0_10px_32px_rgb(0,0,0,0.25)] bg-background rounded-md`}>
 				<div
 					className={`w-full h-auto flex justify-between items-center`}
 				>

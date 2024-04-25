@@ -7,6 +7,7 @@ import CustomDialog from "../CustomDialog";
 import CustomInput from "../FormComponent/CustomInput";
 import { SelectScrollable } from "../FormComponent/CustomSelect";
 import { Textarea } from "@/components/ui/textarea";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export enum GENDER {
 	MALE = "MALE",
@@ -43,7 +44,9 @@ const CreateProfileForm = () => {
 		linkedinUrl: "",
 	});
 	return (
-		<div className={`w-full h-auto grid grid-cols-3 max-md:grid-cols-1 gap-2 max-md:gap-4 relative top-3 max-sm:mb-5`}>
+		<div
+			className={`w-[1300px] max-2xl:w-full max-sm:w-full h-auto grid grid-cols-3 max-md:grid-cols-1 gap-4 max-md:gap-4 relative top-3 max-sm:mb-5`}
+		>
 			<div className={`w-full h-auto rounded-md`}>
 				<div
 					className={`w-auto h-auto flex justify-center items-center flex-col gap-5 relative`}
@@ -57,7 +60,9 @@ const CreateProfileForm = () => {
 					</Button>
 				</div>
 			</div>
-			<form className={`w-full h-96 col-span-2 max-md:col-span-1 space-y-3 rounded-md`}>
+			<form
+				className={`w-full h-96 col-span-2 max-md:col-span-1 space-y-3 rounded-md`}
+			>
 				<div
 					className={`w-full h-auto rounded-lg border-2 border-secondary p-4 space-y-2`}
 				>
@@ -66,7 +71,9 @@ const CreateProfileForm = () => {
 					>
 						Personal Info
 					</h1>
-					<div className={`w-full h-auto grid grid-cols-2 max-sm:grid-cols-1 gap-3`}>
+					<div
+						className={`w-full h-auto grid grid-cols-2 max-sm:grid-cols-1 gap-3`}
+					>
 						<CustomInput
 							value={userForm.firstName}
 							name="firstName"
@@ -81,7 +88,9 @@ const CreateProfileForm = () => {
 							label="Lastname"
 							placeholder="Lastname"
 						/>
-						<div className={`col-span-2 max-sm:col-span-1 space-y-3`}>
+						<div
+							className={`col-span-2 max-sm:col-span-1 space-y-3`}
+						>
 							<SelectScrollable
 								value={userForm.gender}
 								name="gender"
@@ -113,37 +122,39 @@ const CreateProfileForm = () => {
 					>
 						Social Info
 					</h1>
-					<div className={`w-full h-auto grid grid-cols-2 max-sm:grid-cols-1 gap-3`}>
+					<div
+						className={`w-full h-auto grid grid-cols-2 max-sm:grid-cols-1 gap-3`}
+					>
 						<CustomInput
-							value={userForm.facebookUrl || ''}
+							value={userForm.facebookUrl || ""}
 							name="facebookUrl"
 							type="text"
 							label="Facebook url"
 							placeholder="Facebook url"
 						/>
 						<CustomInput
-							value={userForm.instgramUrl || ''}
+							value={userForm.instgramUrl || ""}
 							name="instgramUrl"
 							type="text"
 							label="Instgram url"
 							placeholder="Instgram url"
 						/>
 						<CustomInput
-							value={userForm.twitterUrl || ''}
+							value={userForm.twitterUrl || ""}
 							name="twitterUrl"
 							type="text"
 							label="Twitter url"
 							placeholder="Twitter url"
 						/>
 						<CustomInput
-							value={userForm.youtubeUrl || ''}
+							value={userForm.youtubeUrl || ""}
 							name="youtubeUrl"
 							type="text"
 							label="Youtube url"
 							placeholder="Youtube url"
 						/>
 						<CustomInput
-							value={userForm.linkedinUrl || ''}
+							value={userForm.linkedinUrl || ""}
 							name="linkedinUrl"
 							type="text"
 							label="Linkedin url"
@@ -160,31 +171,31 @@ const CreateProfileForm = () => {
 				setShow={setShowAvtarPopup}
 				title="Choose an Avtar"
 			>
-				<div
-					className={`w-full h-auto bg-secondary p-3 rounded grid grid-cols-3 gap-3 max-h-56`}
-				>
-					{Object.keys(avtarConstants).map(
-						(items: string, index: number) => {
-							const uniqueId = useId();
-							return (
-								<button
-									className={`w-full h-auto p-1 rounded-full border-2 ${
-										avtar === items
-											? "border-primary"
-											: " border-transparent"
-									}`}
-									key={uniqueId}
-									onClick={() => setAvtar(items)}
-								>
-									<img
-										src={avtarConstants[items]}
-										className={`w-full h-auto rounded-full object-contain`}
-									/>
-								</button>
-							);
-						}
-					)}
-				</div>
+				<ScrollArea className="w-full h-56 bg-secondary p-3 rounded">
+					<div className="grid grid-cols-3 gap-3 max-[460px]:grid-cols-2 h-auto w-full">
+						{Object.keys(avtarConstants).map(
+							(items: string, index: number) => {
+								const uniqueId = useId();
+								return (
+									<button
+										className={`w-full h-auto p-1 rounded-full border-2 ${
+											avtar === items
+												? "border-primary"
+												: " border-transparent"
+										}`}
+										key={uniqueId}
+										onClick={() => setAvtar(items)}
+									>
+										<img
+											src={avtarConstants[items]}
+											className={`w-full h-auto rounded-full object-contain`}
+										/>
+									</button>
+								);
+							}
+						)}
+					</div>
+				</ScrollArea>
 			</CustomDialog>
 		</div>
 	);
