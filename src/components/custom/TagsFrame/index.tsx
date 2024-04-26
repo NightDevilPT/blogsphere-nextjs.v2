@@ -1,6 +1,7 @@
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { tags } from "@/constants/tags";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useId } from "react";
 
 const TagFrame = () => {
@@ -22,9 +23,10 @@ const TagFrame = () => {
 						) => {
 							const uniqueId = useId();
 							return (
-								<div
+								<Link
 									className={`relative cursor-pointer w-auto h-28 overflow-hidden min-w-44 min-h-28 mb-3 rounded-md group`}
 									key={uniqueId}
+									href={`/by-tags/${items.name}`}
 								>
 									<Image
 										src={items.image}
@@ -34,7 +36,7 @@ const TagFrame = () => {
 										className={`w-full h-full rounded-md object-cover`}
 									/>
 									<div
-										className={`absolute left-0 top-0 w-full h-full hidden group-hover:flex justify-center items-center group-hover:bg-slate-950/50 transition-all duration-300`}
+										className={`absolute left-0 top-0 w-full h-full invisible opacity-0 flex group-hover:opacity-100 group-hover:visible justify-center items-center group-hover:bg-slate-950/50 transition-all duration-500`}
 									>
 										<h1
 											className={`text-white font-inter text-xl font-[500]`}
@@ -42,7 +44,7 @@ const TagFrame = () => {
 											{items.name}
 										</h1>
 									</div>
-								</div>
+								</Link>
 							);
 						}
 					)}
